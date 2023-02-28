@@ -1,0 +1,12 @@
+#text {
+    font-weight: bold;
+    font-size: large;
+}
+
+.col-md-12.jumbotron.text-center {
+    background-image: url('https://www.medtecheurope.org/wp-content/uploads/2022/12/shutterstock_2009732474-scaled-e1671116136878.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color:black;
+}   

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Healthcare Attrition</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Our own CSS stylesheet -->
+  <link rel="stylesheet" href="static/css/styles.css" media="screen">
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+
+<style>
+  body {
+    background-image: url("https://thumbs.dreamstime.com/z/healthcare-medical-background-flat-icons-symbols-science-medicine-innovation-technology-concept-140008777.jpg");
+  }
+  </style>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Healthcare Attrition Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="well">
+          <h5>Gender:</h5>
+          <select id="selDataset" onchange="optionChangedGender(this.value)">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <div id="gender_pie"></div>
+        </div>
+       
+        <div class="well">
+          <h5>Marital Status:</h5>
+          <select id="selDataset2" onchange="optionChangedmarital(this.value)">
+            <option value="Married">Married</option>
+            <option value="Single">Single</option>
+            <option value="Divorced">Divorced</option>
+        </select>
+        <div id="marital_bar"></div>
+        </div>
+
+        <div class="well">
+          <h5>Department:</h5>
+          <select id="selDataset3" onchange="optionChangedDepartment(this.value)">
+            <option value="Cardiology">Cardiology</option>
+            <option value="Maternity">Maternity</option>
+            <option value="Neurology">Neurology</option>
+          </select>
+          <div id="department_bar"></div> 
+        </div>
+
+        <div class="well">
+          <h5>JobSatisfaction:</h5>
+          <select id="selDataset4" onchange="optionChangedJobSatisfaction(this.value)">
+            <option value="1">Not Satisfied</option>
+            <option value="2">Neutral</option>
+            <option value="3">Satisfied</option>
+            <option value="4">Very Satisfied</option>
+          </select>
+          <div id="JobSatisfaction_pie"></div>
+        </div>
+
+        <div class="highcharts-figure">
+          <div id="container"></div>
+        </div>
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/app.js"></script>
+
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  
+</body>
+
+</html>
